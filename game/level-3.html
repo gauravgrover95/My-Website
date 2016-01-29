@@ -1,0 +1,294 @@
+<!-- <!DOCTYPE html> -->
+<HTML>
+<HEAD>
+<TITLE>Mining Mario 25</TITLE>
+<link rel="stylesheet" type="text/css" href="animate.css">
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+	body {
+
+		max-height: 100% ;
+		max-width: 100%;
+		border: 1px solid black;
+		position: relative;
+	}
+
+	button {
+		background: orange;
+		padding: 60px;
+		position: absolute;
+		width: 35%;
+		top: 35%;
+		left: 30%;
+		z-index: 10;
+		font-size: 36px;
+		border-radius: 10%;
+		border: 3px solid #ff5500;
+		box-shadow: 10px 10px 5px #888888;
+	}
+
+	.cover{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 10;
+	}
+
+	.row1 {background-color: #4DD0E1;}
+	.row2 {background-color: #26C6DA;}
+	.row3 {background-color: #00BCD4;}
+	.row4 {background-color: #00ACC1;}
+	.row5 {background-color: #0097A7;}
+
+	.col-md-3 {
+		position: relative;
+	}
+
+	.red {
+		background: url("http://themushroomkingdom.net/images/ani/ani_smk_bowserwin.gif");
+	    background-size: 40% 40%;
+	    background-repeat: no-repeat;
+        background-position: center center;  
+        color: red;
+	}
+	.green {
+		background: url("http://themushroomkingdom.net/images/ani/ani_yc_wink2.gif");
+	    background-size: 60% 60%;
+	    background-repeat: no-repeat;
+        background-position: center center; 
+		color: green;
+	}
+
+	p {
+		display: inline;
+	}
+
+	div > div > p {
+		color: black;
+		display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 30px;
+		position: absolute;
+		top: 30%;
+		left: 40%;
+	}
+
+</style>
+
+<script type="text/javascript" src="jquery-1.11.3.js"></script>
+
+<script type="text/javascript">
+	
+	function load() {
+		window.location.replace("http://www.maxcool12345.cu.cc/game");
+	}
+</script>
+
+
+<!-- // new game algorithm -->
+<script type="text/javascript">
+	
+	// $("button").hide();
+
+	function newGame() {
+
+		 window.location.reload();
+	}
+
+</script>
+</HEAD>
+
+<BODY>
+
+<!-- score -->
+<span style = "position: fixed; right: 30px; top: 6px; font-size: 20px; color: green; z-index: 20;" id = "score"><p>Score: score / count</p></span>
+
+
+
+
+<!-- blocks -->
+<div class = "row">
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d1"><div class = "cover row1"><p>1</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d2"><div class = "cover row1"><p>2</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d3"><div class = "cover row1"><p>3</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d4"><div class = "cover row1"><p>4</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d5"><div class = "cover row1"><p>5</p></div></div>
+</div>
+
+<div class = "row">
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d6"><div class = "cover row2"><p>6</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d7"><div class = "cover row2"><p>7</p></div></div> 
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d8"><div class = "cover row2"><p>8</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d9"><div class = "cover row2"><p>9</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d10"><div class = "cover row2"><p>10</p></div></div>
+</div>
+
+<div class = "row">
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d11"><div class = "cover row3"><p>11</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d12"><div class = "cover row3"><p>12</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d13"><div class = "cover row3"><p>13</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d14"><div class = "cover row3"><p>14</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d15"><div class = "cover row3"><p>15</p></div></div>
+</div>
+
+<div class = "row">
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d16"><div class = "cover row4"><p>16</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d17"><div class = "cover row4"><p>17</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d18"><div class = "cover row4"><p>18</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d19"><div class = "cover row4"><p>19</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d20"><div class = "cover row4"><p>20</p></div></div>
+</div>
+
+<div class = "row">
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d21"><div class = "cover row5"><p>21</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d22"><div class = "cover row5"><p>22</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d23"><div class = "cover row5"><p>23</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d24"><div class = "cover row5"><p>24</p></div></div>
+<div class = 'col-md-3' style = 'height: 20%; max-width: 20%; border: 2px solid black;' id = "d25"><div class = "cover row5"><p>25</p></div></div>
+</div>
+
+
+
+
+
+
+
+<!-- SCRIPTS -->
+
+<!-- algorithm to check if shiftkey was PRESSED or not -->
+
+<script type="text/javascript">
+
+	var pressed = false;
+
+	$(document).keydown(function (e) {
+	    if (e.keyCode == 16) {
+			pressed = true;
+	    }
+	});
+
+
+	$(document).keyup(function (e) {
+	    if (e.keyCode == 16) {
+	       	pressed = false;
+	    }
+	});
+
+
+	$("#mno").click(function() {
+
+
+
+	});
+</script>
+
+
+<script type="text/javascript">
+
+// random  number generator function
+	function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+// array to define position of monsters
+	var reds = [];
+
+// array that will define positions of mario
+	var greens = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
+
+
+// upper limit on number of monsters
+	var redLimit = 8;
+
+// algorithm to randomize positions
+	for (var i = 0; i < redLimit; i++) {
+			reds[i] = getRandomInt(1,25);
+
+			$("#d" + reds[i]).addClass("red animated rubberBand");
+			
+			greens[reds[i] - 1] = 0;
+			
+	}
+
+	for(var i = 0; i < 25; i++) {
+
+		$("#d" + greens[i]).addClass("green");
+	}
+</script>
+
+<!-- mario counter algorithm -->
+<script type="text/javascript">
+	var count = 0;
+	for (var i = 0; i < greens.length; i++) {
+		if(greens[i] > 0) count = count + 1;
+	};
+</script>
+
+
+
+
+<script type="text/javascript">
+	
+// declaration of audio files
+	var die = document.createElement('audio');
+    die.setAttribute('src', 'die.wav');
+
+	var live = document.createElement('audio');
+    live.setAttribute('src', 'coin.mp3');
+
+
+	var dragon = document.createElement('audio');
+    dragon.setAttribute('src', 'dragon.mp3'); 
+    dragon.setAttribute('autoplay', 'autoplay');
+
+	var back = document.createElement('audio');
+    back.setAttribute('src', 'water.mp3'); 
+    back.setAttribute('autoplay', 'autoplay');
+
+// score declaration
+	var score = 0;
+
+
+
+// on mouseover algorithm	
+	$(".cover").mouseover(function(e) {
+	
+	if(pressed) {
+
+
+			$(this).hide();
+			var cover = $(this).parent().css("color");
+
+			console.log(cover);
+
+			var red = "rgb(255, 0, 0)";
+
+			if(cover === red ) {
+
+				die.play();
+				back.pause();
+				$("body").append('<button name="btn" onclick="newGame()"><p>You Died..!!</p> <p>Play Again?</p></button>');
+				$(".cover").hide();
+				
+			}
+
+			else {
+				score = score + 1;
+				live.play();
+				$("#score").remove();
+				$("body").append('<span style = "position: fixed; right: 30px; top: 6px; font-size: 20px; color: #64DD17; z-index: 20;" id = "score">' + "Score: " + score + " / " + count + "</span>");
+                if (score === count) {window.location.replace("level-4.html")};
+			}
+	
+    };
+
+});
+
+</script>
+
+</BODY>
+</HTML>

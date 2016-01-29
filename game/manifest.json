@@ -1,0 +1,15 @@
+{
+	"name":"Mining Mario 25",
+	"version": "0.1",
+	"manifest_version": 2,
+	"description": "Help Mario saving the world!!",
+	"app": {
+		"urls": ["http://www.maxcool12345.cu.cc/"],
+		"launch": {
+			"web_url": "http://www.maxcool12345.cu.cc/game"
+		}
+	},
+	"icons": {
+		"128": "paper_mario.png"
+	}
+}
